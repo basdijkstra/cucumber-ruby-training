@@ -18,6 +18,18 @@ When('I add {int} and {int}') do |num1, num2|
   @calculator.add(num1, num2)
 end
 
+Given('the first number is {int}') do |first|
+  puts('First: ' + first.to_s)
+end
+
+Given(/^the second number is (\d+)$/) do |second|
+  puts('Second: ' + second.to_s)
+end
+
+When('the two numbers are added') do
+
+end
+
 Then('the result should be {int}') do |expected_result|
   actual_result = @calculator.result
   if actual_result != expected_result
