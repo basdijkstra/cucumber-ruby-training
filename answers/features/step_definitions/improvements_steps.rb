@@ -6,6 +6,6 @@ When('we add {word} paint') do |colour|
   puts("#{colour} paint added")
 end
 
-Then('the result is {word} paint') do |result|
+Then(/^the result is (orange|green|purple) paint$/) do |result|
   puts("The paint is now #{result}")
 end
